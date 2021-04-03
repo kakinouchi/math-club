@@ -1,13 +1,13 @@
 # math-club
 
-# 想定用途
+### 想定用途
 - 数学の視覚的理解に役立てる。
 
-# 参考文献
+### 参考文献
 - [Pythonで学ぶ線形代数学](https://www.amazon.co.jp/dp/B08BP19MMK)
 
 
-# installation
+### installation
 
 - 前提：docker, docker-compose をインストールずみ。( [↓で補足あり](#docker-%E3%81%A8-docker-compose--%E3%81%AE%E8%A3%9C%E8%B6%B3)) )
 
@@ -22,8 +22,8 @@
   - プロセスを停止する時は `docker-compose stop`
 
 
-# docker🐳 と docker compose 🐙 の補足
-### docker と docker-compose を3行で。
+### docker🐳 と docker compose 🐙 の補足
+##### docker と docker-compose を3行で。
 
 - **Q. docker とは?**  
 A. ユーザー視点で言えば超軽量な VM みたいなものだという理解でいったんOK。(プロセス単位で仮想化したもの)
@@ -39,7 +39,7 @@ docker-compose.yml というファイルに設定さえ書いてしまえば、�
   - Docker: https://docs.docker.com/get-docker/
   - Docker Compose: https://docs.docker.com/compose/install/
 
-### これだけはおぼえておきたい docker コマンド
+##### これだけはおぼえておきたい docker コマンド
 (docker に限った話ではないですが)  
 コマンドをいくつか叩いてみると docker を理解した気分になれると思います。
 
@@ -70,6 +70,6 @@ docker の流れは ↑ こんな感じ。(『プログラマのためのDocker�
 参考: [Dockerでよく使うコマンドまとめ
 ](https://morizyun.github.io/docker/about-docker-command.html)
 
-### おすすめ入門資料
+##### Docker のおすすめ入門資料
   - https://knowledge.sakura.ad.jp/13265/ コマンドをたたきながら理解できる。
   - 『プログラマのためのDocker教科書』 の3章を読んで docker を操作的に理解し、しくみがしりたかったらさらに 2章を読む。
