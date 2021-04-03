@@ -25,14 +25,14 @@
 # docker🐳 と docker compose 🐙 の補足
 ### docker と docker-compose を3行で。
 
-- **Q. docker とは?**
+- **Q. docker とは?**  
 A. ユーザー視点で言えば超軽量な VM みたいなものだという理解でいったんOK。(プロセス単位で仮想化したもの)
-- **Q. docker のなにが嬉しいの？**
+- **Q. docker のなにが嬉しいの？**  
 A. ソースコードだけでなく開発環境も共有できるところ。また、環境がよごれなくてすむのも嬉しいところの一つ。
-- **Q. docker-compose って？**
-A. docker での環境構築をさらに容易にしてくれるもの。別に使わなくてもよいやつ。
-docker-compose.yml というファイルに設定さえ書いてしまえば、「docker-compose up 叩いといてー」で環境構築が終わるのが cool です.
-特に(1ホスト上で)複数コンテナを立ち上げる時に便利。
+- **Q. docker-compose って？**  
+A. docker での環境構築をさらに容易にしてくれるもの。別に使わなくてもよいやつ。  
+docker-compose.yml というファイルに設定さえ書いてしまえば、「docker-compose up 叩いといてー」で環境構築が終わるのが cool です.  
+特に(1ホスト上で)複数コンテナを立ち上げる時に便利。  
 (余談：複数ホストでまたがってコンテナを管理したくなった時に使うのがコンテナオーケストレーションツール。kubernetes がデファクトスタンダード。k8s と略す。)
 
 - **インストール方法** はこちら：
@@ -48,16 +48,16 @@ docker-compose.yml というファイルに設定さえ書いてしまえば、�
 docker の流れは ↑ こんな感じ。(『プログラマのためのDocker教科書』より引用)
 以下補足。
 
-- Docker イメージというのがあり、これが言ってみれば "環境(Dockerコンテナ)のもと" となるもの。[DockerHub](https://hub.docker.com/) というところに様々な Dockerイメージがあげられている。
+- Docker イメージというのがあり、これが言ってみれば "環境(Dockerコンテナ)のもと" となるもの。  [DockerHub](https://hub.docker.com/) というところに様々な Dockerイメージがあげられている。
 ( git管理されたファイルをおいておくのが GitHub, Dockerイメージをおいておくのが DockerHub。)
-- 図にあるように、`docker create Dockerイメージ名` というコマンドで Docker イメージから Dockerコンテナを作れる。
+- 図にあるように、`docker create Dockerイメージ名` というコマンドで Docker イメージから Dockerコンテナを作れる。  
 (このコマンドをたたいた時にローカルに Dockerイメージがなければ DockerHub からダウンロードしてくれる。)
-- コンテナの一覧は `docker ps -a` で確認できる。コンテナのステータス確認もこのコマンドでやる。
-(`-a` オプションですべてのコンテナを表示。つけなｋれば稼働中のコンテナのみ表示)
+- コンテナの一覧は `docker ps -a` で確認できる。コンテナのステータス確認もこのコマンドでやる。  
+(`-a` オプションですべてのコンテナを表示。つけなｋれば稼働中のコンテナのみ表示)  
 (コンテナのステータスは、`restarting`, `running`, `paused`, `exited` のいずれか。)
 
 - `docker start コンテナid` でコンテナを起動することができる。コンテナid は `docker ps -a` で確認。
-- 図にあるように、`docker create Dockerイメージ名` + `docker start コンテナid` を毎回やるのは面倒なのでショートカットが用意されており、それが `docker run Dockerイメージ名` 。
+- 図にあるように、`docker create Dockerイメージ名` + `docker start コンテナid` を毎回やるのは面倒なのでショートカットが用意されており、それが `docker run Dockerイメージ名` 。  
 例えば、`docker run ubuntu:latest /bin/echo 'Hello world'` などとコマンドをたたくと、
 「Ubuntu の latest ヴァージョンの Docker イメージをもとにコンテナを作り、そのコンテナを起動し、起動した コンテナの Ubuntu 上で `echo 'Hello World'` を実行する」ということが行われる。
 - -it オプションをつけて、`docker run -it ubuntu:latest` などとやると、対話的に実行できる。
