@@ -11,15 +11,14 @@
 
 - 前提：docker, docker-compose をインストールずみ。( [↓で補足あり](#docker-%E3%81%A8-docker-compose--%E3%81%AE%E8%A3%9C%E8%B6%B3)) )
 
-- `docker-compose up -d`
-
-- cf: [【Docker】3分でjupyterLab(python)環境を作る！](https://qiita.com/hgaiji/items/edf71435d0565257f980)
-
 - 起動コマンド：
   - `sudo service docker status` で docker のデーモンが起動してるか確認。起動してなければ `sudo service docker start` で起動する。
   - `docker-compose up -d`
   - 起動できた雰囲気になったら、ブラウザで `http://localhost:8888` へ。Enjoy 👍
   - プロセスを停止する時は `docker-compose stop`
+
+- cf: [【Docker】3分でjupyterLab(python)環境を作る！](https://qiita.com/hgaiji/items/edf71435d0565257f980)
+
 
 ---
 
