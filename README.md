@@ -21,6 +21,7 @@
   - 起動できた雰囲気になったら、ブラウザで `http://localhost:8888` へ。Enjoy 👍
   - プロセスを停止する時は `docker-compose stop`
 
+---
 
 ### docker🐳 と docker compose 🐙 の補足
 ##### docker と docker-compose を3行で。
