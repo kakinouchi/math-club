@@ -9,7 +9,7 @@
 
 # installation
 
-- 前提：docker, docker-compose をインストールずみ。( [↓で補足あり]()) )
+- 前提：docker, docker-compose をインストールずみ。( [↓で補足あり](#docker-%E3%81%A8-docker-compose--%E3%81%AE%E8%A3%9C%E8%B6%B3)) )
 
 - `docker-compose up -d`
 
