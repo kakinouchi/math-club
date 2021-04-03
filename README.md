@@ -45,7 +45,7 @@ docker-compose.yml というファイルに設定さえ書いてしまえば、�
 
 ![](./docker-lifecycle.jpg)
 
-docker の流れは ↑ こんな感じ。(『プログラマのためのDocker教科書』より引用)
+docker の流れは ↑ こんな感じ。(『プログラマのためのDocker教科書』より引用)  
 以下補足。
 
 - Docker イメージというのがあり、これが言ってみれば "環境(Dockerコンテナ)のもと" となるもの。  [DockerHub](https://hub.docker.com/) というところに様々な Dockerイメージがあげられている。
