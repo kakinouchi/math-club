@@ -49,7 +49,7 @@ docker の流れは ↑ こんな感じ。(『プログラマのためのDocker�
 以下補足。
 
 - Docker イメージというのがあり、これが言ってみれば "環境(Dockerコンテナ)のもと" となるもの。  
-[DockerHub](https://hub.docker.com/) というところに様々な Dockerイメージがあげられている。
+[DockerHub](https://hub.docker.com/) というところに様々な Dockerイメージがあげられている。  
 ( git管理されたファイルをおいておくのが GitHub, Dockerイメージをおいておくのが DockerHub。)
 - 図にあるように、`docker create Dockerイメージ名` というコマンドで Docker イメージから Dockerコンテナを作れる。  
 (このコマンドをたたいた時にローカルに Dockerイメージがなければ DockerHub からダウンロードしてくれる。)
