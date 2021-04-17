@@ -37,7 +37,7 @@ docker-compose.yml というファイルに設定さえ書いてしまえば、�
 特に(1ホスト上で)複数コンテナを立ち上げる時に便利。  
 (余談：複数ホストでまたがってコンテナを管理したくなった時に使うのがコンテナオーケストレーションツール。kubernetes がデファクトスタンダード。k8s と略す。)
 
-  ![](./dockervsdockercompose.png)
+  ![](./resources/docker-explained/dockervsdockercompose.png)
 
   ( [Docker Compose入門 (2) ～ウェブサーバの開発環境を作るための準備～](https://knowledge.sakura.ad.jp/23632/) より引用。  
 コンテナを複数扱うとなると docker-compose なしにやってられない)
@@ -59,7 +59,7 @@ docker-compose.yml というファイルに設定さえ書いてしまえば、�
 (docker に限った話ではないですが)  
 コマンドをいくつか叩いてみると docker を理解した気分になれると思います。
 
-![](./docker-lifecycle.jpg)
+![](./resources/docker-explained/docker-lifecycle.jpg)
 
 docker の流れは ↑ こんな感じ。(『プログラマのためのDocker教科書』より引用)  
 以下補足。
@@ -84,8 +84,7 @@ docker の流れは ↑ こんな感じ。(『プログラマのためのDocker�
 (dockerイメージはファイル容量が数GBのものもしばしばあるので容量が気になるようであれば定期的に掃除するとよい)
 
 
-参考: [Dockerでよく使うコマンドまとめ
-](https://morizyun.github.io/docker/about-docker-command.html)
+参考: [Dockerでよく使うコマンドまとめ](https://morizyun.github.io/docker/about-docker-command.html)
 
 ##### Docker のおすすめ入門資料
   - https://knowledge.sakura.ad.jp/13265/ さくらインターネットによる入門資料。コマンドをたたきながら理解できる。
