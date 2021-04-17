@@ -26,6 +26,12 @@
 
 - cf: [【Docker】3分でjupyterLab(python)環境を作る！](https://qiita.com/hgaiji/items/edf71435d0565257f980)
 
+### グラフライブラリについて
+『Python で学ぶ線形代数学』では、3Dグラフィックスを扱えるグラフライブラリとして VPython を使っていますが、Jupyter Lab で使えなさそうだった(https://github.com/vpython/vpython-jupyter/issues/95) ので、代わりに [plotly](https://plotly.com/python/getting-started/) を採用しました。
+- 数学っぽいグラフが書きやすそう (https://plotly.com/python/scientific-charts/)
+- グリグリできる(interactiveな)グラフも生成できそう
+
+というのが採用理由です。
 
 ---
 
