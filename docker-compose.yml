@@ -1,8 +1,7 @@
 version: "3"
 services:
   notebook:
-# https://hub.docker.com/r/jupyter/datascience-notebookからimageをpullする
-    image: jupyter/datascience-notebook
+    build: .
     # ポートの設定("ホスト：コンテナ")
     ports:
       - "8888:8888"
