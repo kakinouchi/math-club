@@ -54,7 +54,7 @@ docker-compose.yml というファイルに設定さえ書いてしまえば、�
     - Docker Desktop for Mac をインストールするのが無難。
     - https://matsuand.github.io/docs.docker.jp.onthefly/docker-for-mac/install/
   - Windows
-    - WSL2 を インストールした上で Docker Desktop for Windows をインストールする。
+    - WSL2 を インストールした上で Docker Desktop for Windows をインストールするのが無難。
     - https://matsuand.github.io/docs.docker.jp.onthefly/docker-for-windows/install/
     - 参考(古くなったらごめんなさい)：
       - https://qiita.com/zaki-lknr/items/db99909ba1eb27803456
