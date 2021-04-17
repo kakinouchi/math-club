@@ -9,9 +9,9 @@
 
 ### installation
 
-- 前提：docker, docker-compose をインストールずみ。 ( [docker について↓で補足あり](#docker-%E3%81%A8-docker-compose--%E3%81%AE%E8%A3%9C%E8%B6%B3)) )
+- 前提：docker Engine, docker-compose をインストールずみ。 ( [docker について↓で補足あり](#docker-%E3%81%A8-docker-compose--%E3%81%AE%E8%A3%9C%E8%B6%B3)) )
 
-- 注意点：Linux には対応できていません。Docker Decktop for Mac, Docker Desktop for Windows を想定しています。 **Windows で WSL を使ってる場合は、WSL 上に Docker を入れるのではなく Docker Desktop for Windows を使うようにしてください。** (Docker Desktop WSL 2 backend) (↓で補足)
+- 注意点：Linux には対応できていません。Docker Decktop for Mac, Docker Desktop for Windows を想定しています。 **Windows で WSL を使ってる場合は、WSL 上に Docker を入れるのではなく Docker Desktop for Windows を使うようにしてください。** (Docker Desktop WSL 2 backend) (↓で補足)  
   (コンテナ上でファイルを読み書きした時に permission denied が発生するはず)
 - 起動コマンド：
   - `sudo service docker status` で docker のデーモンが起動してるか確認。起動してなければ `sudo service docker start` で起動する。
@@ -44,6 +44,7 @@ docker-compose.yml というファイルに設定さえ書いてしまえば、�
 
 
 - **インストール方法** はこちら：
+  (Docker Desktop に Docker Engine と Docker compose が入ってる)
   - Mac
     - Docker Desktop for Mac をインストールするのが無難。
     - https://matsuand.github.io/docs.docker.jp.onthefly/docker-for-mac/install/
