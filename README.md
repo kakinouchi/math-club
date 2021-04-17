@@ -13,15 +13,16 @@
 
 - 注意点：Linux には対応できていません。Docker Decktop for Mac, Docker Desktop for Windows を想定しています。  
  (Linux をホストとして使ってる場合、コンテナ上でファイルを読み書きした時に permission denied が発生するはず)  
- **Windows の場合、  
- A. WSL 上に Docker を入れるのではなく Docker Desktop for Windows を使うようにする(Docker Desktop WSL 2 backend)か、  
- B. WSL 上に Docker を入れて、WSL では常に root ユーザーにすれば本環境が動くはずです**  
+ **Windows の場合、  WSL 上に Docker を入れるのではなく Docker Desktop for Windows を使うようにすれば本環境が動くはずです(Docker Desktop WSL 2 backend)**  
  (↓で補足します)
 - 起動コマンド：
-  - `sudo service docker status` で docker のデーモンが起動してるか確認。起動してなければ `sudo service docker start` で起動する。
-  - `docker-compose up -d`
+  - `docker-compose up -d` ※
   - 起動できた雰囲気になったら、ブラウザで `http://localhost:8888` へ。Enjoy 👍
   - プロセスを停止する時は `docker-compose stop`
+  - ※もし起動できなければ、Docker Engine のデーモンが立ち上がってない可能性が高いです。  
+  GUI(Docker Desktop) かコマンドでデーモンの状態を確認し、立ち上がってなければ起動してください。
+  コマンドの場合は、`sudo service docker status`, `sudo service docker start`。(Windows Power Shell だと別のコマンドかも。)
+
 
 - cf: [【Docker】3分でjupyterLab(python)環境を作る！](https://qiita.com/hgaiji/items/edf71435d0565257f980)
 
@@ -44,7 +45,7 @@ docker-compose.yml というファイルに設定さえ書いてしまえば、�
   ![](./resources/docker-explained/dockervsdockercompose.png)
 
   ( [Docker Compose入門 (2) ～ウェブサーバの開発環境を作るための準備～](https://knowledge.sakura.ad.jp/23632/) より引用。  
-コンテナを複数扱うとなると docker-compose なしにやってられない)
+  コンテナを複数扱うとなると docker-compose なしにやってられない。)
 
 
 - **インストール方法** はこちら：
@@ -52,16 +53,13 @@ docker-compose.yml というファイルに設定さえ書いてしまえば、�
   - Mac
     - Docker Desktop for Mac をインストールするのが無難。
     - https://matsuand.github.io/docs.docker.jp.onthefly/docker-for-mac/install/
-  - Windows (以下の2つの方法がある)
-    - A. WSL2 を インストールした上で Docker Desktop for Windows をインストールする。
+  - Windows
+    - WSL2 を インストールした上で Docker Desktop for Windows をインストールする。
     - https://matsuand.github.io/docs.docker.jp.onthefly/docker-for-windows/install/
     - 参考(古くなったらごめんなさい)：
+      - https://qiita.com/zaki-lknr/items/db99909ba1eb27803456
       - https://qiita.com/fkooo/items/d2fddef9091b906675ca
       - https://tech-lab.sios.jp/archives/21675
-      - https://qiita.com/zaki-lknr/items/db99909ba1eb27803456
-    - B. WSL2 上に docker engine および docker compose をインストールし、WSL では常に root ユーザーにする。
-    - 参考(古くなったらごめんなさい)：
-      - https://futureys.tokyo/how-permission-should-be-set-for-developing-inside-a-container-using-wsl-2/
 
 
 ##### これだけはおぼえておきたい docker コマンド
