@@ -9,8 +9,10 @@
 
 ### installation
 
-- 前提：docker, docker-compose をインストールずみ。( [↓で補足あり](#docker-%E3%81%A8-docker-compose--%E3%81%AE%E8%A3%9C%E8%B6%B3)) )
+- 前提：docker, docker-compose をインストールずみ。 ( [docker について↓で補足あり](#docker-%E3%81%A8-docker-compose--%E3%81%AE%E8%A3%9C%E8%B6%B3)) )
 
+- 注意点：Linux には対応できていません。Docker Decktop for Mac, Docker Desktop for Windows を想定しています。 **Windows で WSL を使ってる場合は、WSL 上に Docker を入れるのではなく Docker Desktop for Windows を使うようにしてください。** (Docker Desktop WSL 2 backend) (↓で補足)
+  (コンテナ上でファイルを読み書きした時に permission denied が発生するはず)
 - 起動コマンド：
   - `sudo service docker status` で docker のデーモンが起動してるか確認。起動してなければ `sudo service docker start` で起動する。
   - `docker-compose up -d`
@@ -22,7 +24,7 @@
 
 ---
 
-### docker🐳 と docker compose 🐙 の補足
+### docker🐳 と docker compose 🐙 の補足 ～🏃速習Docker🏃～
 ##### docker と docker-compose を3行で。
 
 - **Q. docker とは?**  
@@ -35,9 +37,22 @@ docker-compose.yml というファイルに設定さえ書いてしまえば、�
 特に(1ホスト上で)複数コンテナを立ち上げる時に便利。  
 (余談：複数ホストでまたがってコンテナを管理したくなった時に使うのがコンテナオーケストレーションツール。kubernetes がデファクトスタンダード。k8s と略す。)
 
+  ![](./dockervsdockercompose.png)
+
+  ( [Docker Compose入門 (2) ～ウェブサーバの開発環境を作るための準備～](https://knowledge.sakura.ad.jp/23632/) より引用。  
+コンテナを複数扱うとなると docker-compose なしにやってられない)
+
+
 - **インストール方法** はこちら：
-  - Docker: https://docs.docker.com/get-docker/
-  - Docker Compose: https://docs.docker.com/compose/install/
+  - Mac
+    - Docker Desktop for Mac をインストールするのが無難。
+    - https://matsuand.github.io/docs.docker.jp.onthefly/docker-for-mac/install/
+  - Windows
+    - WSL2 を インストールした上で Docker Desktop for Windows をインストールするのが無難。
+    - https://matsuand.github.io/docs.docker.jp.onthefly/docker-for-windows/install/
+    - 参考(古くなったらごめんなさい)：
+      - https://qiita.com/fkooo/items/d2fddef9091b906675ca
+      - https://tech-lab.sios.jp/archives/21675
 
 ##### これだけはおぼえておきたい docker コマンド
 (docker に限った話ではないですが)  
@@ -48,10 +63,10 @@ docker-compose.yml というファイルに設定さえ書いてしまえば、�
 docker の流れは ↑ こんな感じ。(『プログラマのためのDocker教科書』より引用)  
 以下補足。
 
-- Docker イメージというのがあり、これが言ってみれば "環境(Dockerコンテナ)のもと" となるもの。  
+- **Docker イメージ** というのがあり、これが言ってみれば "環境(Dockerコンテナ)のもと" となるもの。  
 [DockerHub](https://hub.docker.com/) というところに様々な Dockerイメージがあげられている。  
 ( git管理されたファイルをおいておくのが GitHub, Dockerイメージをおいておくのが DockerHub。)
-- 図にあるように、`docker create Dockerイメージ名` というコマンドで Docker イメージから Dockerコンテナを作れる。  
+- 図にあるように、`docker create Dockerイメージ名` というコマンドで Docker イメージから **Dockerコンテナ** を作れる。  
 (このコマンドをたたいた時にローカルに Dockerイメージがなければ DockerHub からダウンロードしてくれる。)
 - コンテナの一覧は `docker ps -a` で確認できる。コンテナのステータス確認もこのコマンドでやる。  
 (`-a` オプションですべてのコンテナを表示。つけなｋれば稼働中のコンテナのみ表示)  
@@ -72,5 +87,8 @@ docker の流れは ↑ こんな感じ。(『プログラマのためのDocker�
 ](https://morizyun.github.io/docker/about-docker-command.html)
 
 ##### Docker のおすすめ入門資料
-  - https://knowledge.sakura.ad.jp/13265/ コマンドをたたきながら理解できる。
-  - 『プログラマのためのDocker教科書』 の3章を読んで docker を操作的に理解し、しくみがしりたかったらさらに 2章を読む。
+  - https://knowledge.sakura.ad.jp/13265/ さくらインターネットによる入門資料。コマンドをたたきながら理解できる。
+  - https://knowledge.sakura.ad.jp/21387/ 同上。docker compose 編。docker の説明が非常にわかりやすい。
+  "このように、特別な状態のプロセスを「コンテナ」と呼び、このコンテナを実行する元になるファイルや関連情報（メタ情報）を、Dockerイメージと呼びます。そして、このDockerイメージは、Docker Hubなどのイメージ・レジストリ（保管庫の意味）を通して、コマンド１つで簡単に送受信できるようにします。"
+  - 『プログラマのためのDocker教科書』 の3章を読んでまずは操作的に理解し、しくみがしりたかったらさらに 2章を読む。
+  - 『イラストでわかるDockerとKubernetes』 (本屋で立ち読みしただけですが、よさそうでした)
