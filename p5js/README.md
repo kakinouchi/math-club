@@ -7,4 +7,4 @@ nodejs をインストールずみ。
 初回のみ、 `npm install` をしてください。(あなたのローカルPCにライブラリがダウンロードされます)
 
  - `npm run serve` で起動し、
- - 起動できた雰囲気になったら、ブラウザで `http://localhost:8888` へ。Enjoy 👍
+ - 起動できた雰囲気になったら、ブラウザで `http://localhost:5555` へ。Enjoy 👍

@@ -1,0 +1,6 @@
+{
+  "name": "src",
+  "projects": [
+    "my_project"
+  ]
+}
