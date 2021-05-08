@@ -11,12 +11,12 @@
    - `jupyter` ディレクトリにあります。
    - python の環境構築はめんどうなので Docker で環境を用意しています。  
      (`docker-compose up -d` でJupyterLab の環境が立ち上がり webブラウザで操作できます)  　　
-     Docker がよくわからない人は [こちら]()を参考にしてください。
-   - グラフライブラリとして plotly を使っています。
+     Docker がよくわからない人は [こちら](https://github.com/kakinouchi/math-club/blob/master/docker-explained.md)を参考にしてみてください。
+   - グラフライブラリとして [plotly](https://plotly.com/python/) を使っています。
  - p5.js
    - `p5js` ディレクトリにあります。  
    - nodejs をインストールして使ってください。
-   - グラフライブラリとして p5.js を使っています。
+   - グラフライブラリとして [p5.js](https://p5js.org/) を使っています。
 
 ### どっちを使えばよい？
 2つの違いは今のところ決めていません。
