@@ -2,7 +2,6 @@
   "name": "p5jsformath",
   "version": "1.0.0",
   "description": "p5js for math",
-  "main": "index.js",
   "scripts": {
     "serve": "cd src && p5 server"
   },
